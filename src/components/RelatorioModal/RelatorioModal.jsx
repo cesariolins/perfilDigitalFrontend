@@ -1,7 +1,7 @@
 // src/components/RelatorioModal/RelatorioModal.jsx
 import { useState, useEffect } from 'react'
 import { dashboardService } from '../../services/dashboardService'
-import './RelatorioModal.css'
+import './relatorioModal.css'
 
 export default function RelatorioModal({ isOpen, onClose }) {
   const [relatorio, setRelatorio] = useState(null)
