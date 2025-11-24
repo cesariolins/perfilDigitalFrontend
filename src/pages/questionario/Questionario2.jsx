@@ -47,7 +47,7 @@ export default function Questionario2() {
     const pontos = opcao.pontos;
     setRespostasQuestionario({
       ...respostasQuestionario,
-      [`pergunta_${pergunta.id}`]: pontos // Salva com o formato pergunta_ID
+      [`pergunta_${pergunta.id}`]: pontos
     });
     setPontuacaoTotal(pontuacaoTotal + pontos);
     setPontosGanhos(pontos);
@@ -59,7 +59,7 @@ export default function Questionario2() {
     if (perguntaAtual < perguntasQuestionario.length - 1) {
       setPerguntaAtual(perguntaAtual + 1);
     } else {
-      // Terminou questionário, envia dados
+
       enviarRespostas();
     }
   };
@@ -74,14 +74,14 @@ export default function Questionario2() {
     };
     console.log('📤 Enviando dados completos para o backend:', dados);
     try {
-      // <--- AQUI ESTÁ A CORREÇÃO: USAR 'api.post' EM VEZ DE 'fetch'
-      const response = await api.post('/questionario/responder', dados); 
+      
+      const response = await api.post('/api/questionario/responder', dados); 
 
       if (response.data.success) {
         console.log('✅ Respostas salvas com sucesso no backend:', response.data.data);
-        // setResultadoFinal(response.data.data); // REMOVIDO: Não é necessário, pois não há setResultadoFinal definido
-        setEtapa('resultado'); // Isso fará com que o componente renderize o bloco de resultado
-        // navigate('/resultado'); // REMOVIDO: O resultado é exibido neste mesmo componente
+        
+        setEtapa('resultado'); 
+        
       } else {
         console.error('❌ Erro ao salvar respostas do backend:', response.data.message);
         alert('Erro ao salvar respostas: ' + response.data.message);
@@ -94,7 +94,6 @@ export default function Questionario2() {
     }
   };
 
-  // Renderizações condicionais
   if (loading) {
     return (
       <div className='questionario'>
