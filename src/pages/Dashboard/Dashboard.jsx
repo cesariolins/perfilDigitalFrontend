@@ -7,7 +7,7 @@ import {
 import Sidebar from '../../components/Sidebar/Sidebar'
 import RelatorioModal from '../../components/RelatorioModal/RelatorioModal'
 import { dashboardService } from '../../services/dashboardService'
-import './Dashboard.css'
+import './dashboard.css'
 
 export default function Dashboard() {
   const [estatisticas, setEstatisticas] = useState(null)
