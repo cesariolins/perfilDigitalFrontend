@@ -4,7 +4,7 @@ import api from './api'
 export const authService = {
   async login(cpf, senha) {
     try {
-      const response = await api.post('/auth/login', { cpf, senha })
+      const response = await api.post('/api/auth/login', { cpf, senha })
       
       if (response.data.success) {
         localStorage.setItem('token', response.data.token)
@@ -27,7 +27,7 @@ export const authService = {
 
   async verificarToken() {
     try {
-      const response = await api.get('/auth/verificar')
+      const response = await api.get('/api/auth/verificar')
       return response.data
     } catch (error) {
       console.error('Erro ao verificar token:', error)
