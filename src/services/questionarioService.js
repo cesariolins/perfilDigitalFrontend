@@ -5,70 +5,84 @@ export const questionarioService = {
   // Validar CPF (verifica se já respondeu)
   async validarCPF(cpf) {
     try {
-      const response = await api.post('/questionario/validar-cpf', { cpf })
+      // Mude esta linha:
+      const response = await api.post('/api/questionario/validar-cpf', { cpf }) // Adicione o '/api' aqui!
       return response.data
     } catch (error) {
-      return { 
-        success: false, 
-        message: error.response?.data?.message || 'Erro ao validar CPF' 
+      return {
+        success: false,
+        message: error.response?.data?.message || 'Erro ao validar CPF'
       }
     }
   },
-
   // Iniciar questionário
   async iniciarQuestionario(cpf) {
     try {
-      const response = await api.post('/questionario/iniciar', { cpf })
+      // Mude esta linha:
+      const response = await api.post('/api/questionario/iniciar', { cpf }) // Adicione o '/api' aqui!
       return response.data
     } catch (error) {
-      return { 
-        success: false, 
-        message: error.response?.data?.message || 'Erro ao iniciar questionário' 
+      return {
+        success: false,
+        message: error.response?.data?.message || 'Erro ao iniciar questionário'
       }
     }
   },
-
-  // Salvar perfil (Seção 0)
+  // Salvar perfil (Seção 0) - Note que no backend você marcou este endpoint como não sendo mais usado diretamente
   async salvarPerfil(respondente_id, perfil) {
     try {
-      const response = await api.post('/questionario/perfil', { 
-        respondente_id, 
-        perfil 
+      // Mude esta linha:
+      const response = await api.post('/api/questionario/perfil', { // Adicione o '/api' aqui!
+        respondente_id,
+        perfil
       })
       return response.data
     } catch (error) {
-      return { 
-        success: false, 
-        message: error.response?.data?.message || 'Erro ao salvar perfil' 
+      return {
+        success: false,
+        message: error.response?.data?.message || 'Erro ao salvar perfil'
       }
     }
   },
-
-  // Salvar respostas do questionário
+  // Salvar respostas do questionário - Note que no backend você marcou este endpoint como não sendo mais usado diretamente
   async salvarRespostas(respondente_id, respostas) {
     try {
-      const response = await api.post('/questionario/respostas', { 
-        respondente_id, 
-        respostas 
+      // Mude esta linha:
+      const response = await api.post('/api/questionario/respostas', { // Adicione o '/api' aqui!
+        respondente_id,
+        respostas
       })
       return response.data
     } catch (error) {
-      return { 
-        success: false, 
-        message: error.response?.data?.message || 'Erro ao salvar respostas' 
+      return {
+        success: false,
+        message: error.response?.data?.message || 'Erro ao salvar respostas'
       }
     }
   },
-
+  // Método unificado para responder o questionário completo
+  async responderQuestionario(cpf, perfil, questionario, pontuacao_total) { // Ajustei os parâmetros aqui para refletir o uso no backend
+    try {
+      // Mude esta linha:
+      const response = await api.post('/api/questionario/responder', { cpf, perfil, questionario, pontuacao_total }) // Adicione o '/api' aqui!
+      return response.data
+    } catch (error) {
+      return {
+        success: false,
+        message: error.response?.data?.message || 'Erro ao salvar questionário'
+      }
+    }
+  },
   // Buscar resultado
   async buscarResultado(respondente_id) {
     try {
-      const response = await api.get(`/questionario/resultado/${respondente_id}`)
+      // Mude esta linha:
+      const response = await api.get(`/api/questionario/resultado/${respondente_id}`) // Adicione o '/api' aqui!
       return response.data
     } catch (error) {
-      return { 
-        success: false, 
-        message: error.response?.data?.message || 'Erro ao buscar resultado' 
+      return {
+        success: false,
+        message: error.response?.data?.message || 'Erro ao buscar resultado'
       }
     }
   }
