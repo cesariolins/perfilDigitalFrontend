@@ -1,7 +1,7 @@
 // src/components/Sidebar/Sidebar.jsx
 import { useAuth } from '../../hooks/useAuth' // ← MUDA AQUI (não é de contexts)
 import logo from '../../assets/logo.png'
-import './Sidebar.css'
+import './sidebar.css'
 
 export default function Sidebar() {
   const { logout, user } = useAuth()
