@@ -4,7 +4,7 @@ import api from './api'
 export const dashboardService = {
   async getEstatisticas() {
     try {
-      const response = await api.get('api/dashboard/estatisticas')
+      const response = await api.get('/api/dashboard/estatisticas')
       return response.data
     } catch (error) {
       return { 
@@ -16,7 +16,7 @@ export const dashboardService = {
 
   async getDadosGraficos() {
     try {
-      const response = await api.get('api/dashboard/graficos')
+      const response = await api.get('/api/dashboard/graficos')
       return response.data
     } catch (error) {
       return { 
@@ -28,7 +28,7 @@ export const dashboardService = {
 
   async getRelatorioIA() {
     try {
-      const response = await api.get('api/dashboard/relatorio-ia')
+      const response = await api.get('/api/dashboard/relatorio-ia')
       return response.data
     } catch (error) {
       return { 
@@ -40,7 +40,7 @@ export const dashboardService = {
 
   async downloadExcel() {
     try {
-      const response = await api.get('api/dashboard/exportar', {
+      const response = await api.get('/api/dashboard/exportar', {
         responseType: 'blob'
       })
       
