@@ -1,0 +1,24 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 64px;
+  background-color: #EFEFEF;
+  gap: 24px;
+  border-radius: 28px;
+
+}
+
+.esqueci {
+    font-size: 14px;
+    align-self: flex-end;
+    color: #47A789;
+}
+
+.esqueci:hover {
+  color: #337761;
+  cursor: pointer;
+  transition: all .3s;
+}
+
