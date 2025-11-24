@@ -48,7 +48,7 @@ export const questionarioService = {
   async salvarRespostas(respondente_id, respostas) {
     try {
       // Mude esta linha:
-      const response = await api.post('/api/questionario/respostas', { // Adicione o '/api' aqui!
+      const response = await api.post('/api/questionario/respostas', {
         respondente_id,
         respostas
       })
@@ -61,10 +61,9 @@ export const questionarioService = {
     }
   },
   // Método unificado para responder o questionário completo
-  async responderQuestionario(cpf, perfil, questionario, pontuacao_total) { // Ajustei os parâmetros aqui para refletir o uso no backend
+  async responderQuestionario(cpf, perfil, questionario, pontuacao_total) {
     try {
-      // Mude esta linha:
-      const response = await api.post('/api/questionario/responder', { cpf, perfil, questionario, pontuacao_total }) // Adicione o '/api' aqui!
+      const response = await api.post('/api/questionario/responder', { cpf, perfil, questionario, pontuacao_total })
       return response.data
     } catch (error) {
       return {
@@ -76,8 +75,7 @@ export const questionarioService = {
   // Buscar resultado
   async buscarResultado(respondente_id) {
     try {
-      // Mude esta linha:
-      const response = await api.get(`/api/questionario/resultado/${respondente_id}`) // Adicione o '/api' aqui!
+      const response = await api.get(`/api/questionario/resultado/${respondente_id}`)
       return response.data
     } catch (error) {
       return {
