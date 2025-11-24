@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.png"
-import PrimaryButton from "../../components/primaryButton/primaryButton"
+import PrimaryButton from "../../components/primaryButton/PrimaryButton"
 import "./boxHome.css"
 import { useNavigate } from "react-router-dom"
 
