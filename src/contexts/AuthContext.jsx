@@ -1,4 +1,4 @@
-// src/contexts/AuthContext.jsx
+
 import { createContext, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { authService } from '../services/authService'
@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
 
-  // Verifica se há usuário logado ao carregar a aplicação
+
   useEffect(() => {
     const verificarUsuario = async () => {
       const token = localStorage.getItem('token')
@@ -45,7 +45,7 @@ export function AuthProvider({ children }) {
         return { success: false, message: resultado.message }
       }
     } catch (error) {
-      // ✅ AGORA USA O ERROR
+
       console.error('Erro ao fazer login:', error)
       return { 
         success: false, 

@@ -1,9 +1,9 @@
-// src/router.jsx
+
 import { createBrowserRouter } from "react-router-dom"
 import App from "./App"
 import BoxHome from "./pages/boxHome/BoxHome"
 import Questionario from "./pages/questionario/Questionario"
-import Questionario2 from "./pages/questionario/Questionario2" // ✅ IMPORTAR O NOVO COMPONENTE
+import Questionario2 from "./pages/questionario/Questionario2" 
 import Login from "./pages/Login/Login"
 import Dashboard from "./pages/Dashboard/Dashboard"
 

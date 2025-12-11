@@ -1,4 +1,4 @@
-// src/services/dashboardService.js
+
 import api from './api'
 
 export const dashboardService = {
@@ -44,7 +44,7 @@ export const dashboardService = {
         responseType: 'blob'
       })
       
-      // Cria um link temporário para download
+
       const url = window.URL.createObjectURL(new Blob([response.data]))
       const link = document.createElement('a')
       link.href = url
