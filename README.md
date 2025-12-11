@@ -1,13 +1,9 @@
-================================================================================
                         PERFIL DIGITAL - FRONTEND
-================================================================================
 
 Plataforma de Análise de Bem-Estar Digital para Prefeituras
 Frontend da aplicação web desenvolvida para a Prefeitura do Recife
 
-================================================================================
 SOBRE O PROJETO
-================================================================================
 
 O Perfil Digital Frontend é a interface web da plataforma de análise de 
 bem-estar digital, desenvolvida para capacitar prefeituras e instituições 
@@ -22,9 +18,7 @@ Pergunta Norteadora:
 "Como podemos fornecer soluções digitais para que governos e instituições 
 atuem de forma preventiva, educativa e/ou corretiva?"
 
-================================================================================
 TECNOLOGIAS UTILIZADAS
-================================================================================
 
   - React 18               - Biblioteca JavaScript para interfaces de usuário
   - Vite                   - Build tool moderna e rápida
@@ -33,9 +27,7 @@ TECNOLOGIAS UTILIZADAS
   - CSS3                   - Estilização moderna e responsiva
   - JWT                    - Autenticação e autorização
 
-================================================================================
 ESTRUTURA DE PASTAS
-================================================================================
 
 perfildigitalFrontend/
   |
@@ -68,9 +60,7 @@ perfildigitalFrontend/
   +-- package.json
   +-- vite.config.js
 
-================================================================================
 CONFIGURAÇÃO E INSTALAÇÃO
-================================================================================
 
 PRÉ-REQUISITOS
 --------------
@@ -105,9 +95,7 @@ INSTALAÇÃO
 
    npm run build
 
-================================================================================
 DEPLOY
-================================================================================
 
 A aplicação está hospedada no Render e pode ser acessada em:
 
@@ -120,9 +108,7 @@ CONFIGURAÇÃO DE DEPLOY NO RENDER
   - Environment Variables:
       VITE_API_URL: URL do backend
 
-================================================================================
 FUNCIONALIDADES
-================================================================================
 
 PARA CIDADÃOS (QUESTIONÁRIO)
 ----------------------------
@@ -142,9 +128,7 @@ PARA GESTORES (DASHBOARD)
   - Exportação de dados para Excel
   - Análise de dados por IA (em desenvolvimento)
 
-================================================================================
 COMUNICAÇÃO COM O BACKEND
-================================================================================
 
 A aplicação se comunica com o backend através dos serviços em src/services/:
 
@@ -155,9 +139,7 @@ A aplicação se comunica com o backend através dos serviços em src/services/:
 
 Base URL da API: Definida em VITE_API_URL
 
-================================================================================
 INTERFACE
-================================================================================
 
 A interface foi projetada para ser:
   - Intuitiva e fácil de navegar
@@ -165,8 +147,6 @@ A interface foi projetada para ser:
   - Acessível seguindo boas práticas de UX/UI
   - Com feedback visual claro para o usuário
 
-================================================================================
 LICENÇA
-================================================================================
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
